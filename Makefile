@@ -1,4 +1,4 @@
-IMAGE			:=	cirocosta/alpine-git
+IMAGE			:=	cirocosta/aports
 
 .PHONY: image run
 
