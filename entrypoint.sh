@@ -31,7 +31,7 @@ build () {
 
   pushd . >/dev/null
   cd $location
-  abuild -R
+  abuild -r
 
   popd >/dev/null
 }
