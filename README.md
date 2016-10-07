@@ -10,8 +10,12 @@ For more in-depth on how to build Alpine Linux Package, see [Creating an Alpine 
 Let's say we want to build the latest `git` package. It's located under `aports/main/git`. Running the `cirocosta/aports` container, just specify the `-build` command along with the location `main/git`:
 
   ```sh
-  docker run --rm cirocosta/aports -build main/git
+  mkdir -p ./packages
+
+  docker run --rm \
+    -v "`pwd`/packages:/home/aports/packages" \
+    cirocosta/aports -build main/git
   ```
 
-Now your results will be under `
+Now your results will be under `./packages`.
 
